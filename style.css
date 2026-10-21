@@ -35,6 +35,15 @@ a { color: var(--accent); }
 
 h1 { margin: 0; font-size: 2.2rem; line-height: 1.2; }
 
+.avatar {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 h2 {
   margin: 40px 0 16px;
   padding-bottom: 6px;
@@ -107,6 +116,7 @@ ul.plain li { margin-bottom: 12px; }
 @media print {
   :root { --bg: #fff; --text: #000; --muted: #444; --line: #ccc; --accent: #000; }
   .actions { display: none; }
+  .avatar { width: 90px; height: 90px; }
   .page { padding: 0; max-width: none; }
   body { font-size: 11pt; }
   h2 { margin-top: 20px; }
