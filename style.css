@@ -35,11 +35,16 @@ a { color: var(--accent); }
 
 h1 { margin: 0; font-size: 2.2rem; line-height: 1.2; }
 
+.intro-top {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
 .avatar {
-  display: block;
+  flex-shrink: 0;
   width: 120px;
   height: 120px;
-  margin-bottom: 16px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -109,6 +114,8 @@ ul.plain li { margin-bottom: 12px; }
 @media (max-width: 600px) {
   .page { padding-top: 32px; }
   h1 { font-size: 1.8rem; }
+  .intro-top { gap: 16px; }
+  .avatar { width: 80px; height: 80px; }
   .skills { grid-template-columns: 1fr; gap: 0; }
   .skills dd { margin-bottom: 10px; }
 }
