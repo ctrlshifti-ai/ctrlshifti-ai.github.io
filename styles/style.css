@@ -98,11 +98,16 @@ footer {
 
 h1 {
   margin: 0;
-  font-size: 2.2rem;
+  font-size: 1.9rem;
+  font-weight: 500;
   line-height: 1.2;
 
   @media (max-width: 600px) {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+
+  @media print {
+    margin-bottom: 16px;
   }
 }
 
@@ -174,13 +179,14 @@ ul.edu {
 }
 
 .title {
-  margin: 4px 0;
+  margin: 6px 0 8px;
   font-size: 1.1rem;
   color: var(--muted);
 }
 
 .contact {
   margin: 0;
+  line-height: 1.6;
   color: var(--muted);
 
   /* Keep each link on one line so URLs aren't split at a hyphen in the PDF */
@@ -396,5 +402,12 @@ ul.edu {
 section > :last-child {
   @media print {
     margin-bottom: 0;
+  }
+}
+
+/* A little more room between the name block and the Summary heading in the PDF */
+.top {
+  @media print {
+    margin-bottom: 12px;
   }
 }
