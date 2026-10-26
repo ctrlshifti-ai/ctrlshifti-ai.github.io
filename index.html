@@ -59,6 +59,7 @@
   <link rel="stylesheet" href="styles/style.css">
   <script src="scripts/theme.js"></script>
   <script src="scripts/tracking.js" defer></script>
+  <script src="scripts/download-menu.js" defer></script>
   <script type="module" src="scripts/dates.js"></script>
 </head>
 <body>
@@ -78,12 +79,17 @@
             <a href="mailto:mejac279@gmail.com">mejac279@gmail.com</a> ·
             <a href="tel:+918105275714">+91 8105275714</a> ·
             <a href="https://jacksonnaik.com">jacksonnaik.com</a> ·
-            <a href="https://www.linkedin.com/in/jackson-naik" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/jackson-naik" target="_blank" rel="noopener">linkedin.com/in/jackson-naik</a>
           </p>
         </div>
       </div>
-      <p class="print-btn"><button type="button" onclick="window.print()">Print /
-        Save as PDF</button></p>
+      <details class="download-menu">
+        <summary>Download Resume</summary>
+        <div class="download-options">
+          <a href="resume/Jackson-Naik-Resume.pdf" download>PDF (.pdf)</a>
+          <a href="resume/Jackson-Naik-Resume.docx" download>Word (.docx)</a>
+        </div>
+      </details>
     </header>
 
     <section>
@@ -104,10 +110,10 @@
 
       <article class="job">
         <div class="job-title">
-          <h3>Alertdriving (CapOptix)</h3>
+          <h3>Independent Contractor, Frontend Development</h3>
           <span class="date">Nov 2023 – Nov 2026<span class="duration">3 years 2 months</span></span>
         </div>
-        <p class="job-info">Independent Contractor, Frontend Development ·
+        <p class="job-info"><strong>Alertdriving (CapOptix)</strong> ·
           Toronto, Canada (Remote, Mumbai)</p>
         <p class="tech">Vue 3, Ionic, Quasar, Capacitor/Cordova, SCSS, JavaScript,
           GraphQL and REST, in a multi-app monorepo.</p>
@@ -134,28 +140,33 @@
             mobile work: splash screen, status bar theming and push-notification
             tokens.</li>
           <li>Improved accessibility (WCAG) and internationalisation, and wrote
-            the team's merge-request template for UI work.</li>
+            the team's merge request template for UI work.</li>
         </ul>
       </article>
 
       <article class="job">
         <div class="job-title">
-          <h3>Grassdoor Logistics Technologies Pvt Ltd.</h3>
+          <h3>Lead Software Engineer</h3>
           <span class="date">Nov 2021 – Aug 2023<span class="duration">1 year 9 months</span></span>
         </div>
-        <p class="job-info">Lead Software Engineer · Verna, Goa (Remote)</p>
+        <p class="job-info"><strong>Grassdoor Logistics Technologies Pvt Ltd.</strong> · Verna, Goa (Remote)</p>
         <ul>
-          <li>Built features and upgrades for the customer portal backend and
-            the order routing system using Node.js and MySQL.</li>
+          <li>Maintained and extended the customer portal backend in Node.js
+            and MySQL, with HTTP and WebSocket APIs for placing, tracking and
+            managing orders in real time.</li>
+          <li>Integrated and maintained payment gateways for online order
+            payments.</li>
+          <li>Extended the order routing system that assigns incoming orders to
+            available delivery staff.</li>
         </ul>
       </article>
 
       <article class="job">
         <div class="job-title">
-          <h3>SugarBox Networks Pvt. Ltd.</h3>
+          <h3>Senior Software Developer</h3>
           <span class="date">May 2020 – Nov 2021<span class="duration">1 year 6 months</span></span>
         </div>
-        <p class="job-info">Senior Software Developer · Andheri, Mumbai</p>
+        <p class="job-info"><strong>SugarBox Networks Pvt. Ltd.</strong> · Andheri, Mumbai</p>
         <ul>
           <li>Built UI, API integrations and unit tests for internal web admin
             consoles using Angular (9+) and Jest.</li>
@@ -166,10 +177,10 @@
 
       <article class="job">
         <div class="job-title">
-          <h3>Robosoft Technologies Pvt. Ltd.</h3>
-          <span class="date">2015 – May 2020<span class="duration">5 years</span></span>
+          <h3>Senior Software Engineer L1</h3>
+          <span class="date">May 2015 – May 2020<span class="duration">5 years</span></span>
         </div>
-        <p class="job-info">Senior Software Engineer L1 · Udupi</p>
+        <p class="job-info"><strong>Robosoft Technologies Pvt. Ltd.</strong> · Udupi</p>
         <ul>
           <li>Developed more than 20 web applications (frontend) and hybrid
             mobile apps, alone or as part of a team.</li>
@@ -183,81 +194,81 @@
     </section>
 
     <section>
-      <h2>Also worked with</h2>
-      <article class="job">
-        <div class="job-title">
-          <h3>Jamben Technical Services LLC</h3>
-        </div>
-        <p class="job-info">Hor Al Anz, Dubai, UAE</p>
-        <ul>
-          <li>Built their web platform.</li>
-        </ul>
-      </article>
-
-      <article class="job">
-        <div class="job-title">
-          <h3>Bridgemonte Asset Advisors Pvt Limited</h3>
-        </div>
-        <p class="job-info">Mumbai, India</p>
-        <ul>
-          <li>Built their mutual fund / asset management mobile platform.</li>
-        </ul>
-      </article>
-
-      <article class="job">
-        <div class="job-title">
-          <h3>Fixology Technical Services Co. LLC</h3>
-        </div>
-        <p class="job-info">Mumbai, India</p>
-        <ul>
-          <li>Built their web platform.</li>
-        </ul>
-      </article>
-    </section>
-
-    <section>
-      <h2>Project Highlights</h2>
+      <h2>Projects</h2>
       <dl class="projects">
-        <dt>Shared Component Library and Design System <span>Alertdriving
-          (CapOptix)</span></dt>
-        <dd>Led the move from legacy CSS to a token-based SCSS system and from
-          Ionic to Quasar components. Built reusable dropdowns, autocomplete, date
-          pickers, data tables, uploaders and modals, shared across several apps
-          in a monorepo.</dd>
+        <div class="project">
+          <dt>Shared Component Library and Design System <span>Alertdriving
+            (CapOptix)</span></dt>
+          <dd>Led the move from legacy CSS to a token-based SCSS system and from
+            Ionic to Quasar components. Built reusable dropdowns, autocomplete, date
+            pickers, data tables, uploaders and modals, shared across several apps
+            in a monorepo.</dd>
+        </div>
 
-        <dt>Media and Presentation Features <span>Alertdriving (CapOptix)</span></dt>
-        <dd>Built video and audio recording and playback, interactive slide
-          presentations with several layouts, and branded client-side PDF
-          export.</dd>
+        <div class="project">
+          <dt>Media and Presentation Features <span>Alertdriving (CapOptix)</span></dt>
+          <dd>Built video and audio recording and playback, interactive slide
+            presentations with several layouts, and branded client-side PDF
+            export.</dd>
+        </div>
 
-        <dt>Routing System <span>Grassdoor Logistics</span></dt>
-        <dd>Maintained and extended a Node.js system that assigns incoming orders
-          to available delivery staff.</dd>
+        <div class="project">
+          <dt>Routing System <span>Grassdoor Logistics</span></dt>
+          <dd>Maintained and extended a Node.js system that assigns incoming orders
+            to available delivery staff.</dd>
+        </div>
 
-        <dt>Customer Portal Backend <span>Grassdoor Logistics</span></dt>
-        <dd>Maintained and extended a Node.js service of HTTP and WebSocket APIs
-          for placing and managing orders, payment gateway integrations and
-          customer portal data.</dd>
+        <div class="project">
+          <dt>Customer Portal Backend <span>Grassdoor Logistics</span></dt>
+          <dd>Maintained and extended a Node.js service of HTTP and WebSocket APIs
+            for placing and managing orders, payment gateway integrations and
+            customer portal data.</dd>
+        </div>
 
-        <dt>Vendor Management System <span>SugarBox Networks</span></dt>
-        <dd>Built a major part of the UI and the Node.js backend APIs of an admin
-          console for third-party vendors, with unit tests for both.</dd>
+        <div class="project">
+          <dt>Vendor Management System <span>SugarBox Networks</span></dt>
+          <dd>Built a major part of the UI and the Node.js backend APIs of an admin
+            console for third-party vendors, with unit tests for both.</dd>
+        </div>
 
-        <dt>Mutual Funds Investment App (Android/iOS) <span>Robosoft, client
-          Bridgemonte Asset Advisors</span></dt>
-        <dd>Led a team of 2–3 developers building a wealth management and
-          investment app from scratch. Handled coding, code reviews, app store
-          releases and client communication.</dd>
+        <div class="project">
+          <dt>Mutual Funds Investment App (Android/iOS) <span>Robosoft</span></dt>
+          <dd>Led a team of 2–3 developers building a wealth management and
+            investment app from scratch. Handled coding, code reviews, app store
+            releases and client communication.</dd>
+        </div>
 
-        <dt>White-label Video Survey App (WebRTC) <span>Robosoft, clients ICICI
-          and Bajaj Insurance</span></dt>
-        <dd>Refactored a plain JavaScript codebase into a modular one that is easy
-          to customize per client, and delivered change requests over several
-          years.</dd>
+        <div class="project">
+          <dt>White-label Video Survey App (WebRTC) <span>Robosoft, clients ICICI
+            and Bajaj Insurance</span></dt>
+          <dd>Refactored a plain JavaScript codebase into a modular one that is easy
+            to customize per client, and delivered change requests over several
+            years.</dd>
+        </div>
 
-        <dt>Home Loan Mobile App <span>Robosoft, client Indiabulls Housing
-          Finance</span></dt>
-        <dd>Led client-side development from setup to production release.</dd>
+        <div class="project">
+          <dt>Home Loan Mobile App <span>Robosoft, client Indiabulls Housing
+            Finance</span></dt>
+          <dd>Led client-side development from setup to production release.</dd>
+        </div>
+
+        <div class="project">
+          <dt>Web Platform <span>Freelance, client Jamben Technical Services LLC
+            (Dubai, UAE)</span></dt>
+          <dd>Built their web platform.</dd>
+        </div>
+
+        <div class="project">
+          <dt>Mutual Fund / Asset Management Mobile Platform <span>Freelance,
+            client Bridgemonte Asset Advisors (Mumbai)</span></dt>
+          <dd>Built their mutual fund / asset management mobile platform.</dd>
+        </div>
+
+        <div class="project">
+          <dt>Web Platform <span>Freelance, client Fixology Technical Services Co.
+            LLC (Mumbai)</span></dt>
+          <dd>Built their web platform.</dd>
+        </div>
       </dl>
       <p class="other-work"><strong>Other Robosoft work:</strong> a mobile trading
         platform with real-time updates, a lead management app, a lifestyle
@@ -279,7 +290,7 @@
         <dt>Backend and APIs</dt><dd>Node.js, PHP, Slim, REST, GraphQL, WebSockets</dd>
         <dt>Databases and storage</dt><dd>MySQL, SQLite, S3/MinIO object storage</dd>
         <dt>Testing</dt><dd>Jest</dd>
-        <dt>Tools and process</dt><dd>Git, GitHub, merge-request code reviews,
+        <dt>Tools and process</dt><dd>Git, GitHub, merge request code reviews,
           Bitbucket, Jira, Jenkins, SonarQube, VS Code, Agile, pair
           programming</dd>
         <dt>Operating systems</dt><dd>Linux, Windows, macOS</dd>
@@ -299,7 +310,7 @@
       </ul>
     </section>
 
-    <section>
+    <section class="no-print">
       <h2>Languages</h2>
       <p>
         English: fluent (read, write, speak)<br>

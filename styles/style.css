@@ -1,3 +1,9 @@
+/* Fixed paper size and margins so the PDF looks the same whoever prints it */
+@page {
+  size: A4;
+  margin: 15mm 15mm;
+}
+
 :root {
   --bg: #ffffff;
   --text: #1f2328;
@@ -79,6 +85,10 @@ footer {
   padding-top: 96px;
   color: var(--muted);
   font-size: 0.9rem;
+
+  @media print {
+    display: none;
+  }
 }
 
 h1 {
@@ -100,8 +110,10 @@ h2 {
   text-transform: uppercase;
   color: var(--accent);
 
+  /* Keep the heading on the same page as the section below it */
   @media print {
     margin-top: 20px;
+    break-after: avoid;
   }
 }
 
@@ -150,9 +162,9 @@ ul.edu {
     height: 80px;
   }
 
+  /* No photo on the printed resume: ATS parsers ignore it and many recruiters prefer none */
   @media print {
-    width: 90px;
-    height: 90px;
+    display: none;
   }
 }
 
@@ -165,23 +177,60 @@ ul.edu {
 .contact {
   margin: 0;
   color: var(--muted);
+
+  /* Keep each link on one line so URLs aren't split at a hyphen in the PDF */
+  a {
+    white-space: nowrap;
+  }
 }
 
-.print-btn {
+/* "Download resume" button with a small PDF / Word menu */
+.download-menu {
+  position: relative;
+  display: inline-block;
+  margin-top: 12px;
+
   @media print {
     display: none;
   }
 
-  button {
-    margin-top: 12px;
+  summary {
+    list-style: none;
     padding: 6px 14px;
-    font: inherit;
     font-size: 0.9rem;
     color: var(--accent);
-    background: none;
     border: 1px solid var(--accent);
     border-radius: 6px;
     cursor: pointer;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+.download-options {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 160px;
+  padding: 4px 0;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  a {
+    display: block;
+    padding: 8px 14px;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+    background: var(--line);
   }
 }
 
@@ -210,6 +259,11 @@ ul.edu {
 .duration {
   display: block;
   font-size: 0.85rem;
+
+  /* Hidden in the PDF so parsers only see the date range */
+  @media print {
+    display: none;
+  }
 }
 
 .job-info {
@@ -238,7 +292,10 @@ ul.edu {
 
   dd {
     margin: 2px 0 0;
+  }
 
+  /* Each project's title and description stay together on one page */
+  .project {
     @media print {
       break-inside: avoid;
     }
@@ -313,5 +370,12 @@ ul.edu {
 
   &::before {
     mask-image: url("../icons/moon.svg");
+  }
+}
+
+/* Shown on the website but left out of the PDF and Word resume */
+.no-print {
+  @media print {
+    display: none;
   }
 }

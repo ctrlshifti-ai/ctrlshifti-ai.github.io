@@ -1,5 +1,5 @@
 // Sends Google Analytics (GA4) events for the actions we care about:
-// resume printed/saved as PDF, email/phone clicked, LinkedIn and other links opened.
+// resume downloaded (PDF/Word) or printed, email/phone clicked, LinkedIn and other links opened.
 (() => {
   function track(eventName, details) {
     if (typeof gtag === 'function') {
@@ -16,6 +16,9 @@
     }
     if (href.startsWith('tel:')) {
       return 'phone_click';
+    }
+    if (href.endsWith('.pdf') || href.endsWith('.docx')) {
+      return 'resume_download';
     }
     if (href.includes('linkedin.com')) {
       return 'linkedin_click';
@@ -49,7 +52,7 @@
     observer.observe(footer);
   }
 
-  // Fires for the "Print / Save as PDF" button and for Ctrl+P / browser menu printing.
+  // Fires when someone prints the page with Ctrl+P or the browser menu.
   window.addEventListener('beforeprint', () => {
     track('resume_download');
   });
