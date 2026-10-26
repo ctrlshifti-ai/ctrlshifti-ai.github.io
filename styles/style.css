@@ -206,6 +206,12 @@ ul.edu {
   color: var(--muted);
 }
 
+/* Length of each job, shown under its dates */
+.duration {
+  display: block;
+  font-size: 0.85rem;
+}
+
 .job-info {
   margin: 2px 0 6px;
   color: var(--muted);
