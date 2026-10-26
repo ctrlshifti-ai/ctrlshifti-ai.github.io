@@ -1,21 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jackson N. – Senior Software Engineer</title>
   <meta name="description" content="Jackson N. — senior software engineer with 11+ years in web, hybrid mobile and backend development.">
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/theme.js"></script>
+  <script type="module" src="scripts/dates.js"></script>
 </head>
 <body>
-  <main class="page">
+  <main class="wrapper">
+    <button type="button" class="theme-toggle" aria-pressed="true"
+      aria-label="Dark mode"><span></span></button>
 
-    <header class="intro">
-      <div class="intro-top">
-        <img class="avatar" src="dp.png" alt="Jackson N.">
+    <header class="top">
+      <div class="top-row">
+        <img class="dp" src="dp.png" alt="Jackson N.">
         <div>
           <h1>Jackson N.</h1>
-          <p class="role">Senior Software Engineer · Frontend &amp; Full-stack</p>
+          <p class="title">Senior Software Engineer · Frontend, Full-stack,
+            Hybrid Mobile Applications</p>
           <p class="contact">
             Virar West, Mumbai, India<br>
             <a href="mailto:mejac279@gmail.com">mejac279@gmail.com</a> ·
@@ -24,71 +35,102 @@
           </p>
         </div>
       </div>
-      <p class="actions"><button type="button" onclick="window.print()">Print / Save as PDF</button></p>
+      <p class="print-btn"><button type="button" onclick="window.print()">Print /
+        Save as PDF</button></p>
     </header>
 
     <section>
       <h2>Summary</h2>
-      <p>Senior software engineer with 11+ years building web, hybrid mobile and backend applications. Strong in frontend architecture (Vue 3, Angular, React), design systems and shared component libraries, with full-stack experience in Node.js, PHP and MySQL. Has led small teams, mentored less experienced developers and worked directly with clients from setup through production release.</p>
+      <p>
+        Senior software engineer with <span class="experience">11</span>+ years
+        building web, hybrid mobile and backend applications.<br>
+        Strong in frontend development workflow (Vue 3, Angular, React), design
+        systems and shared component libraries, with full-stack experience in
+        Node.js, PHP and MySQL.<br>
+        Has led small teams, mentored less experienced developers and worked
+        directly with clients from setup through production release.
+      </p>
     </section>
 
     <section>
       <h2>Experience</h2>
 
       <article class="job">
-        <div class="job-head">
+        <div class="job-title">
           <h3>Alertdriving (CapOptix)</h3>
-          <span class="dates">Nov 2023 – Nov 2026</span>
+          <span class="date">Nov 2023 – Nov 2026</span>
         </div>
-        <p class="job-meta">Independent Contractor, Frontend Development · Toronto, Canada (Remote, Mumbai)</p>
-        <p class="stack">Vue 3, Ionic, Quasar, Capacitor/Cordova, SCSS, JavaScript, GraphQL and REST, in a multi-app monorepo.</p>
+        <p class="job-info">Independent Contractor, Frontend Development ·
+          Toronto, Canada (Remote, Mumbai)</p>
+        <p class="tech">Vue 3, Ionic, Quasar, Capacitor/Cordova, SCSS, JavaScript,
+          GraphQL and REST, in a multi-app monorepo.</p>
         <ul>
-          <li>Led a codebase-wide styling overhaul, moving legacy CSS and utility classes to component-level SCSS built on design tokens, mixins and responsive breakpoints.</li>
-          <li>Migrated modals, dialogs and form inputs from Ionic to Quasar, and built a documented shared component library used by multiple apps.</li>
-          <li>Built responsive, mobile-first dashboards from Figma designs, with custom bar, line and target-vs-actual charts, score cards and data tables.</li>
-          <li>Contributed to media features: a video recorder and player, an audio player and interactive slide presentations with public read-only modes.</li>
-          <li>Worked to build client-side PDF export (html2pdf, jsPDF) and a reusable multi-file uploader with presigned-URL uploads to S3-style storage.</li>
-          <li>Collaborated on integrating REST and GraphQL APIs, moving business logic into centralized stores, and rolling out features behind feature flags.</li>
-          <li>Contributed to telephony and call-workflow screens, plus native mobile work: splash screen, status bar theming and push-notification tokens.</li>
-          <li>Improved accessibility (WCAG) and internationalisation, and wrote the team's merge-request template for UI work.</li>
+          <li>Led a codebase-wide styling overhaul, moving legacy CSS and
+            utility classes to component-level SCSS built on design tokens,
+            mixins and responsive breakpoints.</li>
+          <li>Migrated modals, dialogs and form inputs from Ionic to Quasar, and
+            built a documented shared component library used by multiple
+            apps.</li>
+          <li>Built responsive, mobile-first dashboards from Figma designs, with
+            custom bar, line and target-vs-actual charts, score cards and data
+            tables.</li>
+          <li>Contributed to media features: a video recorder and player, an
+            audio player and interactive slide presentations with public
+            read-only modes.</li>
+          <li>Worked to build client-side PDF export (html2pdf, jsPDF) and a
+            reusable multi-file uploader with presigned-URL uploads to S3-style
+            storage.</li>
+          <li>Collaborated on integrating REST and GraphQL APIs, moving business
+            logic into centralized stores, and rolling out features behind
+            feature flags.</li>
+          <li>Contributed to telephony and call-workflow screens, plus native
+            mobile work: splash screen, status bar theming and push-notification
+            tokens.</li>
+          <li>Improved accessibility (WCAG) and internationalisation, and wrote
+            the team's merge-request template for UI work.</li>
         </ul>
       </article>
 
       <article class="job">
-        <div class="job-head">
+        <div class="job-title">
           <h3>Grassdoor Logistics Technologies Pvt Ltd.</h3>
-          <span class="dates">Nov 2021 – Aug 2023</span>
+          <span class="date">Nov 2021 – Aug 2023</span>
         </div>
-        <p class="job-meta">Lead Software Engineer · Verna, Goa (Remote)</p>
+        <p class="job-info">Lead Software Engineer · Verna, Goa (Remote)</p>
         <ul>
-          <li>Built features and upgrades for the customer portal backend and the order routing system using Node.js and MySQL.</li>
+          <li>Built features and upgrades for the customer portal backend and
+            the order routing system using Node.js and MySQL.</li>
         </ul>
       </article>
 
       <article class="job">
-        <div class="job-head">
+        <div class="job-title">
           <h3>SugarBox Networks Pvt. Ltd.</h3>
-          <span class="dates">May 2020 – Nov 2021</span>
+          <span class="date">May 2020 – Nov 2021</span>
         </div>
-        <p class="job-meta">Senior Software Developer · Andheri, Mumbai</p>
+        <p class="job-info">Senior Software Developer · Andheri, Mumbai</p>
         <ul>
-          <li>Built UI, API integrations and unit tests for internal web admin consoles using Angular (9+) and Jest.</li>
+          <li>Built UI, API integrations and unit tests for internal web admin
+            consoles using Angular (9+) and Jest.</li>
           <li>Developed and unit-tested Node.js APIs for internal products.</li>
           <li>Developed a vanilla JavaScript version of an internal SDK.</li>
         </ul>
       </article>
 
       <article class="job">
-        <div class="job-head">
+        <div class="job-title">
           <h3>Robosoft Technologies Pvt. Ltd.</h3>
-          <span class="dates">2015 – May 2020</span>
+          <span class="date">2015 – May 2020</span>
         </div>
-        <p class="job-meta">Senior Software Engineer L1 · Udupi</p>
+        <p class="job-info">Senior Software Engineer L1 · Udupi</p>
         <ul>
-          <li>Developed more than 20 web applications (frontend) and hybrid mobile apps, alone or as part of a team.</li>
+          <li>Developed more than 20 web applications (frontend) and hybrid
+            mobile apps, alone or as part of a team.</li>
           <li>Implemented change requests on existing projects.</li>
-          <li>Worked directly with client teams to resolve issues and speed up delivery without lowering quality.</li>
-          <li>Led teams of up to 5, mostly trainees and junior developers, on medium and large projects, passing on knowledge along the way.</li>
+          <li>Worked directly with client teams to resolve issues and speed up
+            delivery without lowering quality.</li>
+          <li>Led teams of up to 5, mostly trainees and junior developers, on
+            medium and large projects, passing on knowledge along the way.</li>
         </ul>
       </article>
     </section>
@@ -96,68 +138,103 @@
     <section>
       <h2>Project Highlights</h2>
       <dl class="projects">
-        <dt>Shared Component Library and Design System <span>Alertdriving (CapOptix)</span></dt>
-        <dd>Led the move from legacy CSS to a token-based SCSS system and from Ionic to Quasar components. Built reusable dropdowns, autocomplete, date pickers, data tables, uploaders and modals, shared across several apps in a monorepo.</dd>
+        <dt>Shared Component Library and Design System <span>Alertdriving
+          (CapOptix)</span></dt>
+        <dd>Led the move from legacy CSS to a token-based SCSS system and from
+          Ionic to Quasar components. Built reusable dropdowns, autocomplete, date
+          pickers, data tables, uploaders and modals, shared across several apps
+          in a monorepo.</dd>
 
         <dt>Media and Presentation Features <span>Alertdriving (CapOptix)</span></dt>
-        <dd>Built video and audio recording and playback, interactive slide presentations with several layouts, and branded client-side PDF export.</dd>
+        <dd>Built video and audio recording and playback, interactive slide
+          presentations with several layouts, and branded client-side PDF
+          export.</dd>
 
         <dt>Routing System <span>Grassdoor Logistics</span></dt>
-        <dd>Maintained and extended a Node.js system that assigns incoming orders to available delivery staff.</dd>
+        <dd>Maintained and extended a Node.js system that assigns incoming orders
+          to available delivery staff.</dd>
 
         <dt>Customer Portal Backend <span>Grassdoor Logistics</span></dt>
-        <dd>Maintained and extended a Node.js service of HTTP and WebSocket APIs for placing and managing orders, payment gateway integrations and customer portal data.</dd>
+        <dd>Maintained and extended a Node.js service of HTTP and WebSocket APIs
+          for placing and managing orders, payment gateway integrations and
+          customer portal data.</dd>
 
         <dt>Vendor Management System <span>SugarBox Networks</span></dt>
-        <dd>Built a major part of the UI and the Node.js backend APIs of an admin console for third-party vendors, with unit tests for both.</dd>
+        <dd>Built a major part of the UI and the Node.js backend APIs of an admin
+          console for third-party vendors, with unit tests for both.</dd>
 
-        <dt>Mutual Funds Investment App (Android/iOS) <span>Robosoft, client Bridgemonte Asset Advisors</span></dt>
-        <dd>Led a team of 2–3 developers building a wealth management and investment app from scratch. Handled coding, code reviews, app store releases and client communication.</dd>
+        <dt>Mutual Funds Investment App (Android/iOS) <span>Robosoft, client
+          Bridgemonte Asset Advisors</span></dt>
+        <dd>Led a team of 2–3 developers building a wealth management and
+          investment app from scratch. Handled coding, code reviews, app store
+          releases and client communication.</dd>
 
-        <dt>White-label Video Survey App (WebRTC) <span>Robosoft, clients ICICI and Bajaj Insurance</span></dt>
-        <dd>Refactored a plain JavaScript codebase into a modular one that is easy to customize per client, and delivered change requests over several years.</dd>
+        <dt>White-label Video Survey App (WebRTC) <span>Robosoft, clients ICICI
+          and Bajaj Insurance</span></dt>
+        <dd>Refactored a plain JavaScript codebase into a modular one that is easy
+          to customize per client, and delivered change requests over several
+          years.</dd>
 
-        <dt>Home Loan Mobile App <span>Robosoft, client Indiabulls Housing Finance</span></dt>
+        <dt>Home Loan Mobile App <span>Robosoft, client Indiabulls Housing
+          Finance</span></dt>
         <dd>Led client-side development from setup to production release.</dd>
       </dl>
-      <p class="other"><strong>Other Robosoft work:</strong> a mobile trading platform with real-time updates (Indiabulls), a lead management app (Indiabulls), a lifestyle news portal (ABP) and a mutual fund app (Axis Mutual Fund).</p>
+      <p class="other-work"><strong>Other Robosoft work:</strong> a mobile trading
+        platform with real-time updates (Indiabulls), a lead management app
+        (Indiabulls), a lifestyle news portal (ABP) and a mutual fund app (Axis
+        Mutual Fund).</p>
     </section>
 
     <section>
       <h2>Skills</h2>
       <dl class="skills">
-        <dt>Languages</dt><dd>JavaScript (ES2020+), TypeScript, HTML5, CSS3, SCSS, JSON, XML</dd>
-        <dt>Frontend frameworks</dt><dd>Vue 3, Quasar, Ionic, Angular 2+, AngularJS, React, jQuery, Bootstrap, Angular Material</dd>
+        <dt>Languages</dt><dd>JavaScript (ES2020+), TypeScript, HTML5, CSS3, SCSS,
+          JSON, XML</dd>
+        <dt>Frontend frameworks</dt><dd>Vue 3, Quasar, Ionic, Angular 2+,
+          AngularJS, React, jQuery, Bootstrap, Angular Material</dd>
         <dt>Mobile</dt><dd>Capacitor, Cordova, Ionic, Android Studio, Xcode</dd>
-        <dt>UI and design systems</dt><dd>Design tokens, SCSS mixins, shared component libraries, responsive design, accessibility (WCAG), i18n</dd>
-        <dt>Data and media</dt><dd>Chart.js, D3, custom SVG charts, html2pdf, jsPDF, WebRTC, audio/video APIs</dd>
+        <dt>UI and design systems</dt><dd>Design tokens, SCSS mixins, shared
+          component libraries, responsive design, accessibility (WCAG), i18n</dd>
+        <dt>Data and media</dt><dd>Chart.js, D3, custom SVG charts, html2pdf,
+          jsPDF, WebRTC, audio/video APIs</dd>
         <dt>Backend and APIs</dt><dd>Node.js, PHP, Slim, REST, GraphQL, WebSockets</dd>
         <dt>Databases and storage</dt><dd>MySQL, SQLite, S3/MinIO object storage</dd>
         <dt>Testing</dt><dd>Jest</dd>
-        <dt>Tools and process</dt><dd>Git, GitHub, merge-request code reviews, Bitbucket, Jira, Jenkins, SonarQube, VS Code, Agile, pair programming</dd>
+        <dt>Tools and process</dt><dd>Git, GitHub, merge-request code reviews,
+          Bitbucket, Jira, Jenkins, SonarQube, VS Code, Agile, pair
+          programming</dd>
         <dt>Operating systems</dt><dd>Linux, Windows, macOS</dd>
       </dl>
     </section>
 
     <section>
       <h2>Education</h2>
-      <ul class="plain">
-        <li><strong>Bachelor of Computer Applications</strong> (2012 – 2015)<br>St Mary's College, Shirva — First Class with Distinction, Mangalore University</li>
-        <li><strong>Higher Secondary Certificate, Science PCMB</strong> (2010 – 2012)<br>St Thomas Jr College, Goregaon (E), Mumbai — 62.83%</li>
-        <li><strong>Secondary School Certificate</strong> (2010)<br>St Thomas High School, Goregaon (E), Mumbai — 76.20%</li>
+      <ul class="edu">
+        <li><strong>Bachelor of Computer Applications</strong> (2012 – 2015)<br>St
+          Mary's College, Shirva — First Class with Distinction, Mangalore
+          University</li>
+        <li><strong>Higher Secondary Certificate, Science PCMB</strong> (2010 –
+          2012)<br>St Thomas Jr College, Goregaon (E), Mumbai — 62.83%</li>
+        <li><strong>Secondary School Certificate</strong> (2010)<br>St Thomas High
+          School, Goregaon (E), Mumbai — 76.20%</li>
       </ul>
     </section>
 
     <section>
       <h2>Languages</h2>
-      <p>English, Hindi, Marathi: fluent (read, write, speak). Konkani, Kannada, Tulu: basic (speak).</p>
+      <p>
+        English: fluent (read, write, speak)<br>
+        Hindi: fluent (read, write, speak)<br>
+        Marathi: fluent (read, write, speak)<br>
+        Konkani: basic (speak)<br>
+        Kannada: basic (speak)<br>
+        Tulu: basic (speak)
+      </p>
     </section>
 
-    <section>
-      <h2>Certifications</h2>
-      <p><a href="https://www.freecodecamp.org/certification/t1tan1um/legacy-front-end">freeCodeCamp Front End Development Certification</a></p>
-    </section>
-
+    <footer>
+      <p>&copy; <span class="year">2026</span> Jackson N.</p>
+    </footer>
   </main>
 </body>
 </html>
