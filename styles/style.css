@@ -188,7 +188,8 @@ ul.edu {
 .download-menu {
   position: relative;
   display: inline-block;
-  margin-top: 12px;
+  /* Same gap as between this button and the Summary heading (h2 margin-top) */
+  margin-top: 40px;
 
   @media print {
     display: none;
