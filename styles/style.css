@@ -58,6 +58,11 @@ a {
 
 p, li, dd {
   max-width: 70ch;
+
+  /* Use the full page width in the PDF */
+  @media print {
+    max-width: none;
+  }
 }
 
 .wrapper {
@@ -239,7 +244,13 @@ ul.edu {
   margin-bottom: 28px;
 
   @media print {
+    margin-bottom: 16px;
     break-inside: avoid;
+  }
+
+  /* The next section heading already has its own top margin */
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -378,5 +389,12 @@ ul.edu {
 .no-print {
   @media print {
     display: none;
+  }
+}
+
+/* In the PDF every section ends flush, so the gap above each heading is the same */
+section > :last-child {
+  @media print {
+    margin-bottom: 0;
   }
 }
